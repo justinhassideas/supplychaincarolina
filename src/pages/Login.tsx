@@ -17,9 +17,14 @@ const Login = () => {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1A2A2F] to-[#2A3A40] flex items-center justify-center p-4">
-      <div className="w-full max-w-md glass-card p-8 rounded-lg">
-        <h1 className="text-3xl font-bold text-white mb-8 text-center">Supply Chain Carolina</h1>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-200 to-cyan-400 flex flex-col items-center justify-center p-4">
+      <div className="text-center mb-8">
+        <h1 className="text-5xl font-bold text-[#1A2A2F] mb-2">Supply Chain Carolina</h1>
+        <p className="text-[#1A2A2F]/80">Welcome back to your supply chain management solution</p>
+        <p className="text-sm text-[#1A2A2F]/60">Powered by RebelChain.ai</p>
+      </div>
+      
+      <div className="w-full max-w-md bg-[#1A2A2F] p-8 rounded-lg shadow-xl">
         <Auth
           supabaseClient={supabase}
           appearance={{
@@ -27,13 +32,33 @@ const Login = () => {
             variables: {
               default: {
                 colors: {
-                  brand: '#60DCE0',
-                  brandAccent: '#20ADD0',
-                }
-              }
-            }
+                  brand: '#00D1FF',
+                  brandAccent: '#00B8E6',
+                  inputBackground: '#1A2A2F',
+                  inputBorder: '#2A3A40',
+                  inputText: '#FFFFFF',
+                  inputPlaceholder: '#4A5A60',
+                },
+                borderWidths: {
+                  buttonBorderWidth: '0px',
+                  inputBorderWidth: '1px',
+                },
+                radii: {
+                  borderRadiusButton: '6px',
+                  buttonBorderRadius: '6px',
+                  inputBorderRadius: '6px',
+                },
+              },
+            },
+            className: {
+              container: 'auth-container',
+              button: 'auth-button',
+              input: 'auth-input',
+              label: 'auth-label text-white/80',
+            },
           }}
           providers={[]}
+          theme="dark"
         />
       </div>
     </div>

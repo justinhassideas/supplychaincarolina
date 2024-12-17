@@ -52,3 +52,20 @@
 .text-balance {
   text-wrap: balance;
 }
+
+/* Auth UI Custom Styles */
+.auth-container {
+  @apply space-y-4;
+}
+
+.auth-button {
+  @apply w-full py-3 px-4 bg-[#00D1FF] hover:bg-[#00B8E6] text-white font-medium transition-colors duration-200 !important;
+}
+
+.auth-input {
+  @apply w-full bg-[#1A2A2F] border border-[#2A3A40] text-white placeholder-[#4A5A60] focus:border-[#00D1FF] transition-colors duration-200 !important;
+}
+
+.auth-label {
+  @apply block mb-1 text-sm font-medium !important;
+}

@@ -29,9 +29,9 @@ const Pricing = () => {
               Email Support
             </li>
           </ul>
-          <Button variant="outline" className="w-full text-white border-white">Get Started</Button>
+          <Button variant="outline" className="w-full text-white border border-white/80 hover:border-white/100 bg-transparent">Get Started</Button>
         </Card>
-        <Card className="p-6 hover-lift bg-white/5 border-white/10 border-accent">
+        <Card className="p-6 hover-lift bg-gradient-to-br from-[#8B5CF6]/20 to-[#D946EF]/20 border-[#D946EF]/30 shadow-lg shadow-[#D946EF]/5">
           <div className="text-2xl font-bold mb-4 text-white">Professional</div>
           <div className="text-4xl font-bold mb-6 text-white">$149<span className="text-lg font-normal">/mo</span></div>
           <ul className="space-y-3 mb-6 text-gray-300">
@@ -48,7 +48,7 @@ const Pricing = () => {
               Priority Support
             </li>
           </ul>
-          <Button variant="outline" className="w-full text-white border-white">Get Started</Button>
+          <Button variant="outline" className="w-full text-white border border-white/80 hover:border-white/100 bg-transparent">Get Started</Button>
         </Card>
         <Card className="p-6 hover-lift bg-white/5 border-white/10">
           <div className="text-2xl font-bold mb-4 text-white">Enterprise</div>
@@ -67,7 +67,7 @@ const Pricing = () => {
               Custom Integration
             </li>
           </ul>
-          <Button variant="outline" className="w-full text-white border-white">Contact Sales</Button>
+          <Button variant="outline" className="w-full text-white border border-white/80 hover:border-white/100 bg-transparent">Contact Sales</Button>
         </Card>
       </div>
     </section>

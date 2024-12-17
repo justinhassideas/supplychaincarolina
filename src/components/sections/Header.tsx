@@ -8,16 +8,16 @@ const Header = () => {
           Supply Chain Carolina
         </div>
         <div className="space-x-6">
-          <Button variant="outline" className="hover-lift text-white border-white">
+          <Button variant="outline" className="hover-lift text-white border border-white/80 hover:border-white/100 bg-transparent">
             About
           </Button>
-          <Button variant="outline" className="hover-lift text-white border-white">
+          <Button variant="outline" className="hover-lift text-white border border-white/80 hover:border-white/100 bg-transparent">
             Services
           </Button>
-          <Button variant="outline" className="hover-lift text-white border-white">
+          <Button variant="outline" className="hover-lift text-white border border-white/80 hover:border-white/100 bg-transparent">
             Contact
           </Button>
-          <Button variant="outline" className="hover-lift text-white border-white">
+          <Button variant="outline" className="hover-lift text-white border border-white/80 hover:border-white/100 bg-transparent">
             Get Started
           </Button>
         </div>

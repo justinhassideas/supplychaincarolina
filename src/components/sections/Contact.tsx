@@ -9,7 +9,7 @@ const Contact = () => {
         <p className="text-xl text-gray-300 mb-8">
           Get in touch with our team to learn how we can help your business thrive
         </p>
-        <Button variant="outline" size="lg" className="hover-lift text-white border-white">
+        <Button variant="outline" size="lg" className="hover-lift text-white border border-white/80 hover:border-white/100 bg-transparent">
           Contact Us <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>

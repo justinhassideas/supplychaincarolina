@@ -31,7 +31,7 @@ const Pricing = () => {
           </ul>
           <Button variant="outline" className="w-full text-white border border-white/80 hover:border-white/100 bg-transparent">Get Started</Button>
         </Card>
-        <Card className="p-6 hover-lift bg-gradient-to-br from-[#D0E2D0]/20 to-[#4A8670]/20 border-[#4A8670]/30 shadow-lg shadow-[#4A8670]/5">
+        <Card className="p-6 hover-lift bg-gradient-to-br from-[#D0E2D0]/30 to-[#4A8670]/30 border-[#4A8670]/40 shadow-lg shadow-[#D0E2D0]/10">
           <div className="text-2xl font-bold mb-4 text-white">Professional</div>
           <div className="text-4xl font-bold mb-6 text-white">$149<span className="text-lg font-normal">/mo</span></div>
           <ul className="space-y-3 mb-6 text-gray-300">

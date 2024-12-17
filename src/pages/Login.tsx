@@ -3,14 +3,40 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Handle the email confirmation
+    const handleEmailConfirmation = async () => {
+      const { error } = await supabase.auth.getSession();
+      if (error) {
+        toast.error("Error confirming email. Please try again.");
+        return;
+      }
+
+      // If we have a hash in the URL, it means we're handling a confirmation
+      if (window.location.hash) {
+        const { error: confirmError } = await supabase.auth.onAuthStateChange((event) => {
+          if (event === "SIGNED_IN") {
+            toast.success("Email confirmed successfully!");
+            navigate("/");
+          }
+        });
+
+        if (confirmError) {
+          toast.error("Error confirming email. Please try again.");
+        }
+      }
+    };
+
+    handleEmailConfirmation();
+
     // Check if user is already logged in
     supabase.auth.onAuthStateChange((event, session) => {
-      if (session) {
+      if (session && event !== "INITIAL_SESSION") {
         navigate("/");
       }
     });

@@ -19,27 +19,33 @@ const Login = () => {
 
       // If we have a hash in the URL, it means we're handling a confirmation
       if (window.location.hash) {
-        const { error: confirmError } = await supabase.auth.onAuthStateChange((event) => {
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
           if (event === "SIGNED_IN") {
             toast.success("Email confirmed successfully!");
             navigate("/");
           }
         });
 
-        if (confirmError) {
-          toast.error("Error confirming email. Please try again.");
-        }
+        // Clean up subscription on unmount
+        return () => {
+          subscription.unsubscribe();
+        };
       }
     };
 
     handleEmailConfirmation();
 
     // Check if user is already logged in
-    supabase.auth.onAuthStateChange((event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (session && event !== "INITIAL_SESSION") {
         navigate("/");
       }
     });
+
+    // Clean up subscription on unmount
+    return () => {
+      subscription.unsubscribe();
+    };
   }, [navigate]);
 
   return (

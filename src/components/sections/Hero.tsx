@@ -12,10 +12,10 @@ const Hero = () => {
           Transform your business with cutting-edge SaaS solutions designed for small and medium enterprises
         </p>
         <div className="flex justify-center gap-4 pt-4">
-          <Button variant="outline" size="lg" className="hover-lift text-white border-white hover:bg-white hover:text-[#1A2A2F]">
+          <Button variant="outline" size="lg" className="hover-lift text-white border-white/80 hover:border-white/100 bg-transparent">
             Start Free Trial <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lg" className="hover-lift text-white border-white hover:bg-white hover:text-[#1A2A2F]">
+          <Button variant="outline" size="lg" className="hover-lift text-white border-white/80 hover:border-white/100 bg-transparent">
             Schedule Demo <MessageSquare className="ml-2 h-4 w-4" />
           </Button>
         </div>
